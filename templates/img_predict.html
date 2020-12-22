@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Pridict - Home </title>
+    </head>
+    <body>
+        <style>
+            body{padding: 0;
+                margin: 0;
+                font-family: sans-serif;}
+            *{box-sizing: border-box;}
+            ._predict-panel-wrapper{width: 768px;
+                border: 1px solid #000;
+                margin: 0 auto;border-radius: 8px;
+                margin-top: 60px;}
+            ._predict-panel-wrapper ._pre-container{padding: 20px;}
+            .row{display: flex;flex-wrap: wrap;}
+            .left_panel{width: 300px;}
+            .right_panel{width: calc(100% - 300px);padding: 24px 16px;}
+            .row-center{    display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;}
+            ._predict-panel-wrapper ._predict-tags{margin: 0px 0px 12px 0px;
+                border: 2px dashed #1ecf2d;
+                padding: 6px 14px;
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #1ecf2d;}
+            ._predict-panel-wrapper .success-predict-panel{width:100%;
+                box-shadow: 0px 4px 10px -7px #000;
+                margin-top: 25px;}
+            ._predict-panel-wrapper h1{margin: 0;
+                font-size: 2.5em;
+                text-align: center;
+                border-bottom: 1px solid #3c3a3a;
+                padding: 0px 0px 12px 0px;}
+            ._predict-panel-wrapper h2{margin: 0;padding: 12px 0px 12px 0px;font-size: 22px;}
+            ._predict-panel-wrapper .text-center{text-align: center;}
+            ._predict-panel-wrapper .text-right{text-align: right;}
+            ._predict-panel-wrapper .form-panel{width: 100%;}
+            ._predict-panel-wrapper .form-panel label{margin: 0px 0px 5px 0px;
+                font-size: 14px;}
+            ._predict-panel-wrapper .form-panel label sup{    color: #ff1313;
+                font-weight: 700;
+                font-size: 14px;}
+            ._predict-panel-wrapper .h-100{height: 100%;}
+            ._predict-panel-wrapper .btn{background-color: #eb472d;
+                border: 0;
+                color: #fff;
+                padding: 9px 12px;
+                width: 150px;
+                margin: 0 auto;
+                margin-top: 16px;
+                box-shadow: 2px 4px 12px 0px #7e7979;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 4px;
+                cursor: pointer;}
+            ._predict-panel-wrapper .dl-columns{display: flex;
+                flex-direction: column;}
+            ._predict-panel-wrapper .w-100{width: 100%;}
+            
+        </style>
+        <!-- HTML start from here -->
+        <div class="_predict-panel-wrapper">
+            <div class="_pre-container">
+                <h1>Image Predict </h1>
+                <div class="row">
+                    <div class="left_panel text-center">
+                            <div class="success-predict-panel">
+                                    <div class="row-center">
+                                        <h2>Your selected image of</h2>
+                                        <div class="_predict-tags">{{prediction_result}}</div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="right_panel">
+                        <div class="row-center h-100 row-column">
+                            <div class="form-panel">
+                                <!-- form start -->
+                                <form method="POST" action="" enctype=multipart/form-data>
+                                    <div class="dl-columns">
+                                        <label>Select Image For Predict <sup>*</sup></label>
+                                        <input type="file" name="img" id="img" accept="image/*">
+                                        <div class="w-100 text-right">
+                                            <input type="submit" value="Predict" class="btn" />
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- form end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row end -->
+            </div>
+            <!-- pre container end -->
+
+        </div>
+        <!-- panel wrapper end -->
+    </body>
+
+</html>
